@@ -1,4 +1,4 @@
-package org.example;
+package org.example.stepdefs;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

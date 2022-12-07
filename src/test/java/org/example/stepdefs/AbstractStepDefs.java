@@ -1,6 +1,8 @@
-package org.example;
+package org.example.stepdefs;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.example.pages.FormPage;
+import org.example.pages.HomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -15,6 +17,8 @@ public abstract class AbstractStepDefs {
 
     protected static HomePage homePage;
 
+    protected static FormPage formPage;
+
     static {
 
         WebDriverManager.chromedriver().setup();
@@ -24,6 +28,7 @@ public abstract class AbstractStepDefs {
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(WAIT_TIME, TimeUnit.SECONDS);
         homePage = new HomePage(driver);
+        formPage = new FormPage(driver);
 
 //        WebDriverManager.firefoxdriver().setup();
 //        driver = new FirefoxDriver();

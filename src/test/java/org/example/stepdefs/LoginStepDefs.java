@@ -1,8 +1,9 @@
-package org.example;
+package org.example.stepdefs;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.example.pages.HomePage;
 
 import static org.junit.Assert.*;
 

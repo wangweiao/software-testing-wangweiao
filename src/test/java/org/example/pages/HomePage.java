@@ -1,4 +1,4 @@
-package org.example;
+package org.example.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -30,17 +30,47 @@ public class HomePage {
     @FindBy(className = "shopping_cart_badge")
     private WebElement cartNumberLabel;
 
+    @FindBy(className = "inventory_item_price")
+    private WebElement priceLabel;
+
     @FindBy(className = "login")
     private WebElement loginLink;
 
     @FindBy(id = "login-button")
     private WebElement loginButton;
 
+    @FindBy(id = "react-burger-menu-btn")
+    private WebElement menuButton;
+
+    @FindBy(id = "logout_sidebar_link")
+    private WebElement logOutButton;
+
+    @FindBy(className = "shopping_cart_link")
+    private WebElement cartButton;
+
     @FindBy(id = "add-to-cart-sauce-labs-backpack")
     private WebElement addBackpackToCartButton;
 
+    @FindBy(id = "add-to-cart-sauce-labs-bike-light")
+    private WebElement addBikeLightToCartButton;
+
+    @FindBy(id = "add-to-cart-sauce-labs-bolt-t-shirt")
+    private WebElement addTShirtToCartButton;
+
+    @FindBy(id = "add-to-cart-sauce-labs-fleece-jacket")
+    private WebElement addJacketToCartButton;
+
+    @FindBy(id = "add-to-cart-sauce-labs-onesie")
+    private WebElement addOnesieToCartButton;
+
+    @FindBy(id = "add-to-cart-test.allthethings()-t-shirt-(red)")
+    private WebElement addRedTShirtToCartButton;
+
     @FindBy(id = "contact-link")
     private WebElement contactUsLink;
+
+    @FindBy(id = "inventory_sidebar_link")
+    private WebElement allItemsLink;
 
     @FindBy(id = "submitMessage")
     private WebElement sendButton;
@@ -60,12 +90,48 @@ public class HomePage {
         loginLink.click();
     }
 
+    public void clickAllItemsLink() {
+        allItemsLink.click();
+    }
+
+    public void clickCartButton() {
+        cartButton.click();
+    }
+
     public void clickLoginButton() {
         loginButton.click();
     }
 
     public void clickBackPackToCart() {
         addBackpackToCartButton.click();
+    }
+
+    public void clickBikeLightToCart() {
+        addBikeLightToCartButton.click();
+    }
+
+    public void clickTShirtToCart() {
+        addTShirtToCartButton.click();
+    }
+
+    public void clickJacketToCart() {
+        addJacketToCartButton.click();
+    }
+
+    public void clickOnesieToCart() {
+        addOnesieToCartButton.click();
+    }
+
+    public void clickRedTShirtToCart() {
+        addRedTShirtToCartButton.click();
+    }
+
+    public void clickMenuButton() {
+        menuButton.click();
+    }
+
+    public void clickLogOutButton() {
+        logOutButton.click();
     }
 
     public void fillField(By locator, String value) {
@@ -94,6 +160,10 @@ public class HomePage {
 
     public String getCartNumber() {
         return cartNumberLabel.getText();
+    }
+
+    public String getPrice() {
+        return priceLabel.getText();
     }
 
     private Optional<WebElement> getError(By errorLocator) {
