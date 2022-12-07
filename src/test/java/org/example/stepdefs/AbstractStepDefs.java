@@ -23,8 +23,8 @@ public abstract class AbstractStepDefs {
 
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.setHeadless(true);
-        options.addArguments("--no-sandbox");
+//        options.setHeadless(true);
+//        options.addArguments("--no-sandbox");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(WAIT_TIME, TimeUnit.SECONDS);
         homePage = new HomePage(driver);
