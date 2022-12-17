@@ -1,3 +1,3 @@
-# assignment-testing-wangweiao
+# software-testing-wangweiao
 
-Assignment project for software testing.
+A simple testing project implemented with Selenium and Gherkin.
